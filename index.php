@@ -11,13 +11,14 @@ $sql = mysqli_query($conn,$query);
     <title>Submissoin Project Monitoring</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="dataTables/datatables.min.css"/>
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/3dcc27b42b.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="dataTables/datatables.min.js"></script>
 </head>
 
 <body>
     <h3 class="text-center">Project Monitoring</h3>
-    <div class="container">
+    <div class="container bg-color rounded p-2">
         <a href="create.php" type="button" class="btn btn-primary">
         <i class="fa-solid fa-plus"></i>
             Add Data
