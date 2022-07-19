@@ -37,6 +37,7 @@ if (isset($_GET['ubah'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Add Project</title>
+    <script src="https://kit.fontawesome.com/3dcc27b42b.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
@@ -88,17 +89,17 @@ if (isset($_GET['ubah'])) {
                         <?php
                         if (isset($_GET['ubah'])) {
                         ?>
-                            <button type="submit" name="aksi" value="edit" class="btn btn-primary">Edit</button>
+                            <button type="submit" name="aksi" value="edit" class="btn btn-primary"><i class="fa-solid fa-pencil"></i>Edit</button>
 
                         <?php
                         } else {
                         ?>
-                            <button type="submit" name="aksi" value="add" class="btn btn-primary">Add</button>
+                            <button type="submit" name="aksi" value="add" class="btn btn-primary"><i class="fa-solid fa-plus"></i>Add</button>
                         <?php
                         }
                         ?>
 
-                        <a href="index.php" type="button" name="cancel" class="btn btn-danger">Cancel</a>
+                        <a href="index.php" type="button" name="cancel" class="btn btn-danger"><i class="fa-solid fa-xmark"></i>Cancel</a>
                     </div>
 
                 </div>

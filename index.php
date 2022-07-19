@@ -1,14 +1,9 @@
 <?php
-
-
-
 include 'config.php';
-
 $query =  "SELECT * FROM pj_monitoring;";
 $sql = mysqli_query($conn,$query);
-
-
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -16,7 +11,7 @@ $sql = mysqli_query($conn,$query);
     <title>Submissoin Project Monitoring</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="dataTables/datatables.min.css"/>
-    <link rel="stylesheet" href="\fontawesome\css\all.min.css">
+    <script src="https://kit.fontawesome.com/3dcc27b42b.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="dataTables/datatables.min.js"></script>
 </head>
 
@@ -24,7 +19,7 @@ $sql = mysqli_query($conn,$query);
     <h3 class="text-center">Project Monitoring</h3>
     <div class="container">
         <a href="create.php" type="button" class="btn btn-primary">
-            <i class="fa fa-times" aria-hidden="true"></i>
+        <i class="fa-solid fa-plus"></i>
             Add Data
         </a>
         <table id="#tabel-data" class="table table-hover">
@@ -68,8 +63,8 @@ $sql = mysqli_query($conn,$query);
                     </div>
                     </td>
                     <td>
-                        <a href="create.php?ubah=<?php echo $result['id_project']; ?>" type="button" class="btn btn-success">edit</a>
-                        <a href="proses.php?hapus=<?php echo $result['id_project']; ?>" type="button" class="btn btn-danger" onclick="return confirm('do you want to delete the data?')">Delete</a> 
+                        <a href="proses.php?hapus=<?php echo $result['id_project']; ?>" type="button" class="btn btn-danger" onclick="return confirm('do you want to delete the data?')"><i class="fa-solid fa-trash"></i></a> 
+                        <a href="create.php?ubah=<?php echo $result['id_project']; ?>" type="button" class="btn btn-success"><i class="fa-solid fa-pencil"></i></a>
                     </td>
                 </tr>
                 <?php 
