@@ -3,30 +3,23 @@ include 'config.php';
 
 if(isset($_POST['aksi'])){
     if($_POST['aksi'] == "add"){
-        
-        // var_dump($_POST);
-        // die();
-
-$pj_name = $_POST['pj_name'];
-$client = $_POST['client'];
-$pj_leader = $_POST['pj_leader'];
-$start_date = $_POST['start_date'];
-$end_date = $_POST['end_date'];
-$progress = $_POST['progress'];
+    
+        $pj_name = $_POST['pj_name'];
+        $client = $_POST['client'];
+        $pj_leader = $_POST['pj_leader'];
+        $start_date = $_POST['start_date'];
+        $end_date = $_POST['end_date'];
+        $progress = $_POST['progress'];
 
 $query = "INSERT INTO pj_monitoring VALUES(null,'$pj_name', '$client', '$pj_leader', '$start_date', '$end_date', '$progress')";
 $sql = mysqli_query($conn, $query);
 if($sql){
     header("location: index.php");
-  //  echo "data berhasil <a href='index.php'>[back]</a>";
 }else{
     echo $query;
 }
 
-//echo $pj_name." | ".$client." | ".$pj_leader." ".$start_date." |".$end_date." | ".$progress;
-       // echo "<br>Add Project <a href='index.php'>[back]</a>";
     }else if($_POST['aksi'] == "edit"){
-        //echo "Project Updated <a href='index.php'>[back]</a>";
         $id_pj=$_POST['id_project'];
         $pj_name = $_POST['pj_name'];
         $client = $_POST['client'];
@@ -46,10 +39,9 @@ if(isset($_GET['hapus'])){
     $sql = mysqli_query($conn, $query);
     if($sql){
         header("location: index.php");
-      //  echo "data berhasil <a href='index.php'>[back]</a>";
     }else{
         echo $query;
-    //echo "delete Project <a href='index.php'>[back]</a>";
+
 }
 }
 
