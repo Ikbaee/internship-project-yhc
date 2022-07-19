@@ -3,17 +3,17 @@ include 'config.php';
 ?>
 
 <?php
- $id_pj='';
+$id_pj = '';
 
- $pj_name ='';
- $client ='';
- $pj_leader ='';
- $start_date = '';
- $end_date = '';
- $progress = '';
+$pj_name = '';
+$client = '';
+$pj_leader = '';
+$start_date = '';
+$end_date = '';
+$progress = '';
 
 if (isset($_GET['ubah'])) {
-    $id_pj=$_GET['ubah'];
+    $id_pj = $_GET['ubah'];
     $query = "SELECT * FROM `submityhc`.`pj_monitoring` WHERE `id_project` = $id_pj;";
     $sql = mysqli_query($conn, $query);
 
@@ -47,61 +47,61 @@ if (isset($_GET['ubah'])) {
             <div class="">
                 <input type="hidden" value="<?php echo $id_pj ?>" name="id_project">
 
-                    <div class="mb-3 row">
-                        <label class="col-sm-2 col-form-label" for="name">Project Name</label>
-                        <div class="col-sm-10">
-                            <input required type="text" id="name" name="pj_name" class="form-control" value="<?php echo $pj_name ?>">
-                        </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" for="name">Project Name</label>
+                    <div class="col-sm-10">
+                        <input required type="text" id="name" name="pj_name" class="form-control" value="<?php echo $pj_name ?>">
                     </div>
-                    <div class="mb-3 row">
-                        <label class="col-sm-2 col-form-label" for="client">Client</label>
-                        <div class="col-sm-10">
-                            <input required type="text" id="client" name="client" class="form-control" value="<?php echo $client ?>">
-                        </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" for="client">Client</label>
+                    <div class="col-sm-10">
+                        <input required type="text" id="client" name="client" class="form-control" value="<?php echo $client ?>">
                     </div>
-                    <div class="mb-3 row">
-                        <label class="col-sm-2 col-form-label" for="">Project leader</label>
-                        <div class="col-sm-10">
-                            <input required type="text" name="pj_leader" class="form-control" value="<?php echo $pj_leader ?>">
-                        </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" for="">Project leader</label>
+                    <div class="col-sm-10">
+                        <input required type="text" name="pj_leader" class="form-control" value="<?php echo $pj_leader ?>">
                     </div>
-                    <div class="mb-3 row">
-                        <label class="col-sm-2 col-form-label" for="">Start Date</label>
-                        <div class="col-sm-10">
-                            <input required type="date" name="start_date" class="form-control" value="<?php echo $start_date ?>">
-                        </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" for="">Start Date</label>
+                    <div class="col-sm-10">
+                        <input required type="date" name="start_date" class="form-control" value="<?php echo $start_date ?>">
                     </div>
-                    <div class="mb-3 row">
-                        <label class="col-sm-2 col-form-label" for="">End Date</label>
-                        <div class="col-sm-10">
-                            <input required type="date" name="end_date" class="form-control" value="<?php echo $end_date ?>">
-                        </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" for="">End Date</label>
+                    <div class="col-sm-10">
+                        <input required type="date" name="end_date" class="form-control" value="<?php echo $end_date ?>">
                     </div>
-                    <div class="mb-3 row">
-                        <label class="col-sm-2 col-form-label" for="">progress</label>
-                        <div class="col-sm-10">
-                            <input required type="number" name="progress" class="form-control" value="<?php echo $progress ?>">
-                        </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" for="">progress</label>
+                    <div class="col-sm-10">
+                        <input required type="number" name="progress" class="form-control" value="<?php echo $progress ?>">
                     </div>
-                    <div class="mb-3 row">
-                        <div class="col">
-                            <?php
-                            if (isset($_GET['ubah'])) {
-                            ?>
-                                <button type="submit" name="aksi" value="edit" class="btn btn-primary">Edit</button>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col">
+                        <?php
+                        if (isset($_GET['ubah'])) {
+                        ?>
+                            <button type="submit" name="aksi" value="edit" class="btn btn-primary">Edit</button>
 
-                            <?php
-                            } else {
-                            ?>
-                                <button type="submit" name="aksi" value="add" class="btn btn-primary">Add</button>
-                            <?php
-                            }
-                            ?>
+                        <?php
+                        } else {
+                        ?>
+                            <button type="submit" name="aksi" value="add" class="btn btn-primary">Add</button>
+                        <?php
+                        }
+                        ?>
 
-                            <a href="index.php" type="button" name="cancel" class="btn btn-danger">Cancel</a>
-                        </div>
-
+                        <a href="index.php" type="button" name="cancel" class="btn btn-danger">Cancel</a>
                     </div>
+
+                </div>
             </div>
         </form>
 
