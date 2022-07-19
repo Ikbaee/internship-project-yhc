@@ -72,8 +72,6 @@ $sql = mysqli_query($conn,$query);
                 }
                  ?>
                 
-
-
                 
     </div>
     </tbody>
