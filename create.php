@@ -24,10 +24,6 @@ if (isset($_GET['ubah'])) {
     $start_date = $result['start_date'];
     $end_date = $result['end_date'];
     $progress = $result['progress'];
-
-
-    // var_dump($result);
-    // die();
 }
 ?>
 <!doctype html>
