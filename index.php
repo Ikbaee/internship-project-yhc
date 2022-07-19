@@ -38,8 +38,6 @@ $sql = mysqli_query($conn,$query);
             <tbody>
                 <?php
                 while($result = mysqli_fetch_assoc($sql)){
-
-                
                 ?>
                 <tr>
                     <td>
